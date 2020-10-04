@@ -88,13 +88,10 @@ body {
 
 // main content
 
-.main_content{
-    border: 1px solid black;
-}
-
 .image{
-    display: inline;
-    box-shadow: 0 0  10px 1px black;
+    display: inline-block;
+    box-shadow: 0 0  5px 1px rgba(0, 0, 0, 0.418);
+   margin: 10px;
 }
 .images img{
     width: 200px;

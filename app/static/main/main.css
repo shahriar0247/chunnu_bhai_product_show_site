@@ -81,14 +81,11 @@ body {
   padding-bottom: 10px;
 }
 
-.main_content {
-  border: 1px solid black;
-}
-
 .image {
-  display: inline;
-  -webkit-box-shadow: 0 0  10px 1px black;
-          box-shadow: 0 0  10px 1px black;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.418);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.418);
+  margin: 10px;
 }
 
 .images img {

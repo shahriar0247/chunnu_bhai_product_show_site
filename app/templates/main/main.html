@@ -27,7 +27,7 @@
 
         </div>
         <div class="head_video">
-            <video src="/static/video/head.mp4" autoplay></video>
+            <video src="/static/video/head.mp4" autoplay    ></video>
         </div>
     </div>
     <div class="middle">
@@ -48,9 +48,11 @@
         </div>
         <div class="main_content">
             <div class="images">
-                {%for image in all_images%}
+                {%for a in range(0, length_of_items)%}
                 <div class="image">
-                    <img src="data:image/png;base64, {{image}}" alt="Red dot" />
+                    <img src="data:image/png;base64, {{all_images[a]}}" alt="Red dot" />
+
+                    <p>Price {{all_cloths_data[a][1]}}</p>
                 </div>
                 {%endfor%}
             </div>
@@ -58,5 +60,10 @@
     </div>
     <div class="footer"></div>
 </body>
-
+<script>
+document.getElementsByTagName('video')[0].onended = function () {
+  this.load();
+  this.play();
+};
+</script>
 </html>
