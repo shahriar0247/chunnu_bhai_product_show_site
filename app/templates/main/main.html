@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fashion Wear</title>
+    <link rel="stylesheet" href="/static/main/main.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <ul>
+            <a href="/men">Men's</a>
+            <a href="/women">Women's</a>
+        </ul>
+    </div>
+    <div class="head">
+        <div class="head_text">
+            <h2>A Fashion Wear & Cosmetic</h2>
+            <p>A aksdlfj aslkdfj;sadlk fjwalkejf sadofjkald fjlkwejfklsadfjlkajfksla fjsalkdf jsadlfjk</p>
+            <h4>Contact:</h4>
+            <p>Phone Number: 01680191709 <br>
+                Whatsapp and IMO: 01680191709 <br>
+                Facebook: <a href="https://www.facebook.com/AFashionWear/">https://www.facebook.com/AFashionWear/</a>
+            </p>
+
+        </div>
+        <div class="head_video">
+            <video src="/static/video/head.mp4" autoplay></video>
+        </div>
+    </div>
+    <div class="middle">
+
+        <div class="navleft">
+            <h3>Cloths</h3>
+            <ul>
+                <li>Panjabi</li>
+                <li>Shirt</li>
+                <li>Fotuwa</li>
+            </ul>
+            <h3>Food</h3>
+            <ul>
+                <li>Honey</li>
+                <li>Food 2</li>
+                <li>Food 3</li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="images">
+                {%for image in all_images%}
+                <div class="image">
+                    <img src="data:image/png;base64, {{image}}" alt="Red dot" />
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$accent: #ff1744;
+$primary: #3d5afe;
+$pdark: #3d5afe;
+$plight: #8187ff;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 5px 1px black;
+
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.topnav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+}
+
+.topnav a {
+    transition: color 200ms;
+    text-decoration: none;
+    color: black;
+}
+
+.topnav a:hover {
+    color: red;
+}
+
+//head
+
+.head {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.head_text{
+    margin-left: 200px;
+    width: 400px;
+}
+.head video, .head_video {
+    width: 600px;
+  
+}
+
+// middle
+
+.middle{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+// nav left
+
+.navleft{
+
+    margin: 20px;
+    margin-top: 0;
+}
+
+.navleft ul{
+    list-style: none;
+}
+.navleft h3{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+// main content
+
+.main_content{
+    border: 1px solid black;
+}
+
+.image{
+    display: inline;
+    box-shadow: 0 0  10px 1px black;
+}
+.images img{
+    width: 200px;
+    margin: 20px;
+}
