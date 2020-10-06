@@ -15,6 +15,8 @@
             <a href="/women">Women's</a>
         </ul>
     </div>
+    <div class="gap"></div>
+    {% if main_page == "1" %}
     <div class="head">
         <div class="head_text">
             <h2>A Fashion Wear & Cosmetic</h2>
@@ -30,25 +32,22 @@
             <video src="/static/video/head.mp4" autoplay    ></video>
         </div>
     </div>
+    {% endif %}
     <div class="middle">
 
         <div class="navleft">
-            <h3>Cloths</h3>
+            <h3>Tags</h3>
             <ul>
-                <li>Panjabi</li>
-                <li>Shirt</li>
-                <li>Fotuwa</li>
+                {% for a in range(0,tags_length)%}
+                <a href="{{tags[a]}}"><div class="tag">{{tags[a]}}</div> </a>
+                {% endfor %}
+              
             </ul>
-            <h3>Food</h3>
-            <ul>
-                <li>Honey</li>
-                <li>Food 2</li>
-                <li>Food 3</li>
-            </ul>
+         
         </div>
         <div class="main_content">
             <div class="images">
-                {%for a in range(0, length_of_items)%}
+                {%for a in range(0, imagelength)%}
                 <div class="image">
                     <img src="data:image/png;base64, {{all_images[a]}}" alt="Red dot" />
 
@@ -65,5 +64,6 @@ document.getElementsByTagName('video')[0].onended = function () {
   this.load();
   this.play();
 };
+
 </script>
 </html>

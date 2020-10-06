@@ -3,7 +3,7 @@ from app import app
 from flask import render_template, request
 import os
 import random
-
+from app.get_images import get_new_image_id
 import sqlite3
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), "images")
@@ -18,8 +18,18 @@ def allowed_file(filename):
 def image_upload_directory():
     os.getcwd()
 
-def save_image(image_id, image):
-    image.save(os.path.join(UPLOAD_FOLDER, str(image_id)))
+def save_image(image_id, image, tag):
+    save_path = os.path.join(UPLOAD_FOLDER, tag)
+    try:
+        os.mkdir(UPLOAD_FOLDER)
+    except:
+        pass
+    try:
+        os.mkdir(save_path)
+    except:
+        pass
+    save_name = os.path.join(save_path, str(image_id))
+    image.save(save_name)
 
 def save_to_db(image_id, price, tag):
     with sqlite3.connect("database/cloths_db") as conn:
@@ -37,8 +47,8 @@ def setid():
             if allowed_file(image.filename):
                 if not price == "":
 
-                    image_id = random.randint(0,10000)
-                    save_image(image_id, image)
+                    image_id = get_new_image_id()
+                    save_image(image_id, image, tag)
                     save_to_db(image_id,price, tag)
 
                 else:
