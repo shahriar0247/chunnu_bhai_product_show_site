@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-$accent: #ff1744;
+$accent: #e43f3f;
 $primary: #3d5afe;
-$pdark: #3d5afe;
-$plight: #8187ff;
+$pdark: #1e3ce6f3;
+$plight: rgb(86, 179, 255);
+$black1: #222222;
 $black2: rgba(0, 0, 0, 0.7);
 
 html,
@@ -28,9 +29,7 @@ body {
     transition: all 300ms;
    
 }
-.topnav:hover{
-    background-color: $accent;
-}
+
 .topnav ul {
     list-style: none;
     display: grid;
@@ -48,12 +47,78 @@ body {
 }
 
 .topnav a:hover {
-    color: white;
+    color: $accent;
 }
 
 .gap{
     margin-top: 100px;
 }
+
+// offers
+
+.offers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-auto-rows: minmax(200px, auto);
+    
+}
+
+.offer_card{
+    
+    max-height: 400px;
+    color: white;
+    font-size: 120%;
+    margin: 20px;
+    height: 200px;
+   
+}
+
+.offer_card:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+    height: 400px;
+}
+
+.offer_img{
+    height: 100%;
+   
+    position: relative;    
+    left: 0%;
+    transition: all 500ms;
+    top: 0%;
+    
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px 1px black;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+.offer_card:nth-child(1) .offer_img{
+    grid-template-columns: 4fr 1fr; 
+}
+.offer_img:hover{
+    height: 110%;
+    margin-top: -1%;
+    left: 2%;
+    top: -2%;
+    box-shadow: 0 0 20px 1px black;
+}
+
+.offer_img img{
+    
+    height: 100%;
+    max-width: 160%;
+    margin-left: 20px;
+    z-index: 90;
+}
+
+.offer_text{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: -20px;
+z-index: 100;
+}
+
+
 
 //head
 
@@ -92,22 +157,22 @@ body {
 }
 .tag{
     margin: 10px;
-    font-size: 120%;
+    font-size: 110%;
     vertical-align: center;
-    padding: 10px;
+    padding: 7px;
     padding-left: 20px;
    
     transition: all 200ms;
-    border-radius: 8px;
+ 
     width: 100px;
-    border: 1px solid $accent;
+    border: 1px solid $black1;
     background-color:white;
-    color:  $accent;
+    color:  $black1;
 }
 
 .tag:hover{
     
-    background-color: $accent;
+    background-color: $black1;
     color: white;
     border: 1px solid #ddd;
 }
@@ -126,29 +191,39 @@ body {
 
 // main content
 
-
 .image{
     display: inline-block;
     box-shadow: 0 0  5px 1px rgba(0, 0, 0, 0.418);
    margin: 10px;
    transition: all 200ms;
-   width: 240px;
+   background-color: white;
+   border-radius: 1px;
    
-   border-radius: 10px;
-
  
 }
 .image:hover {
     box-shadow: 0 0  10px 2px rgba(0, 0, 0, 0.418);
-    background-color: $accent;
-    color: white;
+  
+   
 }
 
 .image img{
     width: 200px;
-    margin: 20px;
+    margin: 0;
+    transition: width 200ms;
 }
-.image p{
-    margin: 20px;
-    font-weight: bold;
+.image img:hover{
+    width: 210px;
 }
+.image .p{
+    width: fit-content;
+    margin: 0;
+    margin: 10px;
+    color: black;
+}
+
+.image a{
+   
+    text-decoration: none;
+}
+
