@@ -9,11 +9,10 @@ def home():
 
 @app.route("/<tag>")
 def main(tag):
-    all_images = (get_all_images(tag))
     all_cloths_data = get_all_cloths_data(tag)
-    imagelength = len(all_images)
+    imagelength = len(all_cloths_data)
     tags = get_tags()
     tags_length = len(tags)
     main_page = "1"
-    return render_template("main/main.html" , main_page=main_page, imagelength=imagelength, all_images=all_images, all_cloths_data=all_cloths_data, tags_length=tags_length, tags=tags)
+    return render_template("main/main.html" , main_page=main_page, imagelength=imagelength, all_cloths_data=all_cloths_data, tags_length=tags_length, tags=tags)
 

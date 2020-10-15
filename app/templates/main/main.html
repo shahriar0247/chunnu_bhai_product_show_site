@@ -59,7 +59,7 @@
                 {%for a in range(0, imagelength)%}
                 <a href="/product/{{all_cloths_data[a][0]}}">
                     <div class="image">
-                        <img src="data:image/png;base64, {{all_images[a]}}" alt="Red dot" />
+                        <img src="data:image/png;base64, {{all_cloths_data[a][3]}}" alt="Red dot" />
 
                         <div class="p">{{all_cloths_data[a][2]}}</div>
                         <div class="p">Price {{all_cloths_data[a][1]}}</div>

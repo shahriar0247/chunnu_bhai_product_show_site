@@ -40,9 +40,29 @@ def get_data_database(database_name, table_name, tag):
         data = list(data)
     return data
 
+def get_images(database_name, table_name, tag):
+    with sqlite3.connect("database/" + database_name) as conn:
+        if tag == "main":
+            data = (conn.cursor().execute("select * from " + table_name).fetchall())
+        else:
+            data = (conn.cursor().execute("select * from " + table_name + " where tags= '" + tag + "'").fetchall())
+        data = list(data)
+
+    all_images = []
+
+    for a in data:
+      
+        encoded_image_list = []
+        with open(os.path.join("images", a[0]), "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
+            encoded_image_list.append(encoded_string)
+            all_images.append((a[0], a[1], a[2],encoded_string))
+    return all_images
+
+    
+
 def get_all_cloths_data(tag):
-    all_cloths_data = get_data_database("cloths_db", "cloth", tag)
-    print(all_cloths_data)
+    all_cloths_data = get_images("cloths_db", "cloth", tag)
     return all_cloths_data
 
 def get_tags():
