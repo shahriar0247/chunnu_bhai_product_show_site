@@ -1,69 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "block_content/base.html" %}
+{% block content %}
+{% if main_page == "1" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Fashion Wear</title>
-    <link rel="stylesheet" href="/static/main/main.css">
-</head>
-
-<body>
+<div class="head">
     <div class="topnav">
         <ul>
-            <a href="/men">Men's</a>
-            <a href="/women">Women's</a>
+            <li>Home</li>
+            <li>Contact us</li>
+            <li>Cloths</li>
+            <li>Food</li>
         </ul>
     </div>
-    <div class="gap"></div>
-    {% if main_page == "1" %}
-    <div class="head">
-        <div class="head_text">
-            <h2>A Fashion Wear & Cosmetic</h2>
-            <p>A aksdlfj aslkdfj;sadlk fjwalkejf sadofjkald fjlkwejfklsadfjlkajfksla fjsalkdf jsadlfjk</p>
-            <h4>Contact:</h4>
-            <p>Phone Number: 01680191709 <br>
-                Whatsapp and IMO: 01680191709 <br>
-                Facebook: <a href="https://www.facebook.com/AFashionWear/">https://www.facebook.com/AFashionWear/</a>
-            </p>
 
-        </div>
-        <div class="head_video">
-            <video src="/static/video/head.mp4" autoplay    ></video>
-        </div>
+
+    <div class="head_text">
+        <p>A Fashion Wear</p>
     </div>
-    {% endif %}
-    <div class="middle">
+    <div class="head_img">
+        <div class="head_box">
+            <p>View All Cloths</p>
 
-        <div class="navleft">
+        </div>
+        <div class="head_box">
+            <p>View Panjabis</p>
+        </div>
+        <div class="head_box">
+            <p>View Shirts</p>
+        </div>
+        <div class="head_box">
+            <p>View All Food</p>
+        </div>
+
+    </div>
+    <div class="head_text2">
+        <p>A collection of beautiful and elegant Panjabi and Shirt</p>
+    </div>
+</div>
+{% endif %}
+<div class="middle">
+    <div class="middle_text">
+        <p>All Cloths</p>
+    </div>
+    <div class="middle_content">
+        <!-- <div class="navleft">
             <h3>Tags</h3>
             <ul>
                 {% for a in range(0,tags_length)%}
-                <a href="{{tags[a]}}"><div class="tag">{{tags[a]}}</div> </a>
+                <a href="{{tags[a]}}">
+                    <div class="tag">{{tags[a]}}</div>
+                </a>
                 {% endfor %}
-              
+
             </ul>
-         
-        </div>
+
+        </div> -->
         <div class="main_content">
             <div class="images">
                 {%for a in range(0, imagelength)%}
-                <div class="image">
-                    <img src="data:image/png;base64, {{all_images[a]}}" alt="Red dot" />
+                <a href="/product/{{all_cloths_data[a][0]}}">
+                    <div class="image">
+                        <img src="data:image/png;base64, {{all_images[a]}}" alt="Red dot" />
 
-                    <p>Price {{all_cloths_data[a][1]}}</p>
-                </div>
+                        <div class="p">{{all_cloths_data[a][2]}}</div>
+                        <div class="p">Price {{all_cloths_data[a][1]}}</div>
+
+                    </div>
+                </a>
                 {%endfor%}
             </div>
         </div>
     </div>
-    <div class="footer"></div>
-</body>
-<script>
-document.getElementsByTagName('video')[0].onended = function () {
-  this.load();
-  this.play();
-};
-
-</script>
-</html>
+</div>
+{% endblock %}
