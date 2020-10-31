@@ -12,21 +12,17 @@
     <div class="head_text">
         <h2>A Fashion Wear</h2>
     </div>
+    <video src="/static/video/headvid.mp4" type='video/mp4' autoplay repeat id="headvid">
 
-    <div class="head_img">
-        <div class="head_box">
-            <p>View All Cloths</p>
-        </div>
-        <div class="head_box">
-            <p>View Panjabis</p>
-        </div>
-        <div class="head_box">
-            <p>View Shirts</p>
-        </div>
-        <div class="head_box">
-            <p>View All Food</p>
-        </div>
-    </div>
+    </video>
+    <script>
+        document.getElementsByTagName('video')[0].load();
+        document.getElementsByTagName('video')[0].play();
+       document.getElementsByTagName('video')[0].onended = function () {
+  this.load();
+  this.play();
+};
+    </script>
     <div class="head_text2">
         <p>A collection of beautiful and elegant Panjabi and Shirt</p>
     </div>
