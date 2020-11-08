@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fashtion Wear</title>
+    <link rel="stylesheet" href="/static/main2/main2.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="topleft">
+            <h2>A Fashtion Wear</h2>
+            <p>Lorem ipsum dolor sit, amet </p>
+        </div>
+        <div class="topright">
+
+        </div>
+    </div>
+    <div class="middle">
+        <div class="row1">
+            <div class="row_text">
+                <div class="row_head">
+                    <p>All Cloths</p>
+                </div>
+                <div class="row_view">
+                    <p>View All</p>
+                </div>
+            </div>
+            <div class="images">
+                {%for a in range(0, main[1])%}
+
+                <div class="image" onclick="show_product(this)">
+                    <div class="p">
+                        {{main[0][a][2]}}
+                        <br /> Price {{main[0][a][1]}}
+                    </div>
+
+                    <img src="data:image/png;base64, {{main[0][a][3]}}" alt="Red dot" />
+                </div>
+                </a>
+                {%endfor%}
+
+            </div>
+        </div>
+        <div class="row2">
+            <div class="row_text">
+                <div class="row_head">
+                    <p>Panjabi</p>
+                </div>
+                <div class="row_view">
+                    <p>View All</p>
+                </div>
+            </div>
+            <div class="images">
+                {%for a in range(0, panjabi[1])%}
+
+                <div class="image" onclick="show_product(this)">
+                    <div class="p">
+                        {{panjabi[0][a][2]}}
+                        <br /> Price {{panjabi[0][a][1]}}
+                    </div>
+
+                    <img src="data:image/png;base64, {{panjabi[0][a][3]}}" alt="Red dot" />
+                </div>
+                </a>
+                {%endfor%}
+
+            </div>
+        </div>
+        <div class="row3">
+            <div class="row_text">
+                <div class="row_head">
+                    <p>Shirt</p>
+                </div>
+                <div class="row_view">
+                    <p>View All</p>
+                </div>
+            </div>
+            <div class="images">
+                {%for a in range(0, shirt[1])%}
+
+                <div class="image" onclick="show_product(this)">
+                    <div class="p">
+                        {{shirt[0][a][2]}}
+                        <br /> Price {{shirt[0][a][1]}}
+                    </div>
+
+                    <img src="data:image/png;base64, {{shirt[0][a][3]}}" alt="Red dot" />
+                </div>
+                </a>
+                {%endfor%}
+
+            </div>
+        </div>
+        <div class="row4">
+            <div class="row_text">
+                <div class="row_head">
+                    <p>T-Shirt</p>
+                </div>
+                <div class="row_view">
+                    <p>View All</p>
+                </div>
+            </div>
+            <div class="images">
+                {%for a in range(0, t_shirt[1])%}
+                <a href=" {{t_shirt[0][a][0]}}">
+                <div class="image" onclick="show_product(this)">
+                    <div class="p">
+                        {{t_shirt[0][a][2]}}
+                        <br /> Price {{t_shirt[0][a][1]}}
+                    </div>
+
+                    <img src="data:image/png;base64, {{t_shirt[0][a][3]}}" alt="Red dot" />
+                </div>
+                </a>
+                {%endfor%}
+
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom"></div>
+
+    <script src="/static/js/images_link.js"></script>
+
+</body>
+
+</html>

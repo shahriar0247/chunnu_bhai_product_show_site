@@ -18,8 +18,8 @@ def allowed_file(filename):
 def image_upload_directory():
     os.getcwd()
 
-def save_image(image_id, image, tag):
-    save_path = os.path.join(UPLOAD_FOLDER, tag)
+def save_image(image_id, image):
+    save_path =UPLOAD_FOLDER
     try:
         os.mkdir(UPLOAD_FOLDER)
     except:
@@ -48,7 +48,7 @@ def setid():
                 if not price == "":
 
                     image_id = get_new_image_id()
-                    save_image(image_id, image, tag)
+                    save_image(image_id, image)
                     save_to_db(image_id,price, tag)
 
                 else:
