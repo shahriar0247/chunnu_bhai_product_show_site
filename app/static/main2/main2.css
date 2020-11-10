@@ -28,11 +28,13 @@ body {
   background: white;
   height: 700px;
   padding-top: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .row1 {
-  height: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .row_text {
@@ -60,33 +62,35 @@ body {
 
 .image {
   display: inline-block;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.418);
-          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.418);
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.418);
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.418);
   margin: 10px;
   -webkit-transition: all 200ms;
   transition: all 200ms;
   background-color: white;
   border-radius: 4px;
   width: 250px;
+  height: 275px;
+}
+
+.img {
   height: 200px;
-  overflow: hidden;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  display: block;
 }
 
 .image img {
-  width: 250px;
-  margin: 0;
-  border-radius: 4px;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  z-index: 0;
-  position: relative;
-  top: -50px;
+  width: 200px;
+  margin: auto;
+  display: block;
 }
 
 .image .p {
   font-family: Arial, Helvetica, sans-serif;
-  top: 140px;
-  background: rgba(0, 0, 0, 0.432);
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -95,9 +99,10 @@ body {
   width: fit-content;
   margin: 0;
   margin: 10px;
-  color: white;
+  color: #ff4747;
+  font-size: 120%;
+  font-weight: bold;
   z-index: 1;
-  position: relative;
 }
 
 .image a {

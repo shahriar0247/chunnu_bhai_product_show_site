@@ -2,6 +2,7 @@
 
 $accent: #fff176;
 $black2: #222222;
+$red: rgb(255, 71, 71);
 
 html,
 body {
@@ -33,11 +34,11 @@ body {
   background: white;
   height: 700px;
   padding-top: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .row1 {
-  height: 300px;
+  height: max-content;
   
 }
 
@@ -66,39 +67,45 @@ margin-right: 10%;
 }
 .image {
   display: inline-block;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.418);
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.418);
   margin: 10px;
   transition: all 200ms;
   background-color: white;
   border-radius: 4px;
   width: 250px;
+  height: 275px;
+}
+.img{
   height: 200px;
-  overflow: hidden;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  display: block;
 }
 
+
 .image img {
-  width: 250px;
-  margin: 0;
-  border-radius: 4px;
-  transition: all 200ms;
-  z-index: 0;
-  position: relative;
-  top: -50px;
+  width: 200px;
+  margin: auto;
+  display: block;
 }
 
 .image .p {
     font-family: Arial, Helvetica, sans-serif;
-  top: 140px;
-  background: rgba(0, 0, 0, 0.432);
+
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   width: fit-content;
   margin: 0;
   margin: 10px;
-  color: white;
+  color: $red;
+  font-size: 120%;
+  font-weight: bold;
   z-index: 1;
-  position: relative;
+
 }
 
 .image a {

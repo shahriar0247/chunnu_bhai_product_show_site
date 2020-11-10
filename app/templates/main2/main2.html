@@ -30,21 +30,23 @@
             </div>
             <div class="images">
                 {%for a in range(0, main[1])%}
-
+                
                 <div class="image" onclick="show_product(this)">
-                    <div class="p">
-                        {{main[0][a][2]}}
-                        <br /> Price {{main[0][a][1]}}
-                    </div>
-
-                    <img src="data:image/png;base64, {{main[0][a][3]}}" alt="Red dot" />
+                 
+                    <div class="img" style="background-image: url('data:image/png;base64, {{main[0][a][3]}}') ">
+                    <!-- <img src="data:image/png;base64, {{main[0][a][3]}}" alt="Red dot" /> -->
+                </div>
+                <div class="p">
+                    {{main[0][a][2]}}
+                    <br /> {{main[0][a][1]}} taka
+                </div>
                 </div>
                 </a>
                 {%endfor%}
 
             </div>
         </div>
-        <div class="row2">
+        <div class="row1">
             <div class="row_text">
                 <div class="row_head">
                     <p>Panjabi</p>
@@ -55,21 +57,23 @@
             </div>
             <div class="images">
                 {%for a in range(0, panjabi[1])%}
-
+                
                 <div class="image" onclick="show_product(this)">
-                    <div class="p">
-                        {{panjabi[0][a][2]}}
-                        <br /> Price {{panjabi[0][a][1]}}
-                    </div>
-
-                    <img src="data:image/png;base64, {{panjabi[0][a][3]}}" alt="Red dot" />
+                 
+                    <div class="img" style="background-image: url('data:image/png;base64, {{panjabi[0][a][3]}}') ">
+                    <!-- <img src="data:image/png;base64, {{panjabi[0][a][3]}}" alt="Red dot" /> -->
+                </div>
+                <div class="p">
+                    {{panjabi[0][a][2]}}
+                    <br /> {{panjabi[0][a][1]}} taka
+                </div>
                 </div>
                 </a>
                 {%endfor%}
 
             </div>
         </div>
-        <div class="row3">
+        <div class="row1">
             <div class="row_text">
                 <div class="row_head">
                     <p>Shirt</p>
@@ -80,21 +84,23 @@
             </div>
             <div class="images">
                 {%for a in range(0, shirt[1])%}
-
+                
                 <div class="image" onclick="show_product(this)">
-                    <div class="p">
-                        {{shirt[0][a][2]}}
-                        <br /> Price {{shirt[0][a][1]}}
-                    </div>
-
-                    <img src="data:image/png;base64, {{shirt[0][a][3]}}" alt="Red dot" />
+                 
+                    <div class="img" style="background-image: url('data:image/png;base64, {{shirt[0][a][3]}}') ">
+                    <!-- <img src="data:image/png;base64, {{shirt[0][a][3]}}" alt="Red dot" /> -->
+                </div>
+                <div class="p">
+                    {{shirt[0][a][2]}}
+                    <br /> {{shirt[0][a][1]}} taka
+                </div>
                 </div>
                 </a>
                 {%endfor%}
 
             </div>
         </div>
-        <div class="row4">
+        <div class="row1">
             <div class="row_text">
                 <div class="row_head">
                     <p>T-Shirt</p>
@@ -105,14 +111,16 @@
             </div>
             <div class="images">
                 {%for a in range(0, t_shirt[1])%}
-                <a href=" {{t_shirt[0][a][0]}}">
+                
                 <div class="image" onclick="show_product(this)">
-                    <div class="p">
-                        {{t_shirt[0][a][2]}}
-                        <br /> Price {{t_shirt[0][a][1]}}
-                    </div>
-
-                    <img src="data:image/png;base64, {{t_shirt[0][a][3]}}" alt="Red dot" />
+                 
+                    <div class="img" style="background-image: url('data:image/png;base64, {{t_shirt[0][a][3]}}') ">
+                    <!-- <img src="data:image/png;base64, {{t_shirt[0][a][3]}}" alt="Red dot" /> -->
+                </div>
+                <div class="p">
+                    {{t_shirt[0][a][2]}}
+                    <br /> {{t_shirt[0][a][1]}} taka
+                </div>
                 </div>
                 </a>
                 {%endfor%}
